@@ -10,46 +10,36 @@
   <body>
     <div class="container">
       <h1>Order Pizza</h1>
-      <form id="pizza">
-        <div class="form-group">
-          <label for="number">how many pizza do you want</label>
-          <input type="text" id="number">
+      <form id="pizzaform">
+        <div id="pizza">
+          <div class="pizza">
+            <div class="form-group">
+              <h2>Topping</h2>
+              <label for="topping">Type</label>
+              <select class="form-control topping">
+                <option value="cheese">cheese</option>
+                <option value="pepperoni">pepperoni</option>
+                <option value="artichoke">artichoke</option>
+                <option value="anchovy">anchovy</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <h2>size</h2>
+                <select class="form-control size">
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-        <h2>Topping</h2>
-        <div class="radio">
-          <label><input type="radio" name="topping" value="cheese">cheese</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="topping" value="pepperoni">pepperoni</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="topping" value="artichoke">artichoke</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="topping" value="anchovy">anchovy</label>
-        </div>
-
-        <h2>size</h2>
-        <div class="radio">
-          <label><input type="radio" name="size" value="11">11"</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="size" value="12">12"</label>
-        </div>
-        <div class="radio">
-          <label><input type="radio" name="size" value="13">13"</label>
-        </div>
-
-      </div>
+        <span class="btn btn-danger" id="more">I want more pizza</span>
         <button type="submit" class="btn btn-danger">choose your pizza</button>
       </form>
 
-<div class="output">
-  <p id="aaa">
-
-  </p>
-</div>
-
+      <div class="output">
+        <p id="aaa"></p>
+      </div>
+    </div>
   </body>
 </html>
