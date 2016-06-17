@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Order Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Order Pizza</h1>
+      <form id="pizza">
+        <div class="form-group">
+          <label for="number">how many pizza do you want</label>
+          <input type="text" id="number">
+        </div>
+        <div class="form-group">
+        <h2>Topping</h2>
+        <div class="radio">
+          <label><input type="radio" name="topping" value="cheese">cheese</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="topping" value="pepperoni">pepperoni</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="topping" value="artichoke">artichoke</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="topping" value="anchovy">anchovy</label>
+        </div>
+
+        <h2>size</h2>
+        <div class="radio">
+          <label><input type="radio" name="size" value="11">11"</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="size" value="12">12"</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="size" value="13">13"</label>
+        </div>
+
+      </div>
+        <button type="submit" class="btn btn-danger">choose your pizza</button>
+      </form>
+
+<div class="output">
+  <p id="aaa">
+
+  </p>
+</div>
+
+  </body>
+</html>
