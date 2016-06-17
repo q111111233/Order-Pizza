@@ -1,39 +1,39 @@
 $(function(){
-  $("#more").click(function(){
-    $("#pizza").append('<div class="pizza">'+
-                          '<h3>Another Pizza</h3>'+
-                          '<div class="form-group">'+
-                            '<h2>Topping</h2>'+
-                            '<select class="form-control topping">'+
-                              '<option value="cheese">cheese</option>'+
-                              '<option value="pepperoni">pepperoni</option>'+
-                              '<option value="artichoke">artichoke</option>'+
-                              '<option value="anchovy">anchovy</option>'+
-                            '</select>'+
-                            '</div>'+
-                            '<div class="form-group">'+
-                            '<h2>size</h2>'+
-                            '<select class="form-control size">'+
-                              '<option value="11">11</option>'+
-                              '<option value="12">12</option>'+
-                              '<option value="13">13</option>'+
-                            '</select>'+
-                          '</div>'+
-                        '</div>'
-                    )
-  })
+  var total = 0;
   $("form#pizzaform").submit(function(event){
     event.preventDefault();
-    var num = $(".topping").val();
-    var total =0;
-    $(".pizza").each(function(){
-      var topping = $(this).find(".topping").val();
-      var size = $(this).find(".size").val();
-      total += new Pizza(topping,size).price();
-    });
+    var topping = $(".topping").val();
+    var size = $(".size").val();
+    var newPizza = new Pizza(topping,size);
+    total += newPizza.price();
 
+    $("#orders").append('<li><span class="single-pizza">' + size + '" ' + topping + " " +"pizza</span>(click to see details)</li>");
 
-    $("#aaa").text(num+ " "+total);
+    $(".single-pizza").last().click(function(){
+      $("#details").text("Your topping is: " + newPizza.topping + ", size is: " + newPizza.size + '", price is: $' + newPizza.price());
+    })
+  })
+
+  $("#total").click(function(){
+    $("#cost").show().text("Your Total Cost is: $" + total);
+    $("#delivery").show();
+  });
+
+  $("#delivery-btn").click(function(){
+    var done = $(".delivery").val();
+    if(done === "yes"){
+      $("#textarea").show();
+    }else{
+      $("#done").text("your order is done");
+      $("#textarea").hide();
+    }
+      $("#done").show();
+  })
+
+  $("#final").click(function(){
+      var address = $("#address").val();
+      $("#done").text("Your pizza will be delivered to: " + address);
+      $("#done").show();
   })
 })
 

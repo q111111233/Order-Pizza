@@ -1,0 +1,40 @@
+#delivery, #done, #textarea, #cost{
+  display: none;
+}
+
+body {
+    background: url("../img/Pizza.jpg") repeat 0 0;
+    background-size: 100%;
+}
+
+li :hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: #3333ff;
+}
+
+.col-xs-2{
+  font-family: cursive;
+  color: #748592;
+}
+
+h2{
+  color: #99ff99;
+  font-family: cursive;
+}
+
+h1{
+  color: #ff66a1;
+}
+
+p{
+  color: #ffff99;
+}
+
+h3{
+  font-family: cursive;
+}
+
+.col-xs-7{
+  background-color: #d9b3ff;
+}
